@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "electron-start": "electron .",
     "preelectron-pack": "npm run build",
-    "electron-pack": "electron-builder -c.extraMetadata.main=build/Main.js"
+    "electron-pack": "electron-builder --win --dir -c.extraMetadata.main=build/Main.js",
+    "electron-dist": "electron-builder --win -c.extraMetadata.main=build/Main.js"
   },
   "eslintConfig": {
     "extends": [
@@ -51,8 +52,8 @@
       "build/**/*",
       "node_modules/**/*"
     ],
-    "directories": {
-      "buildResources": "assets"
+    "win": {
+      "target": "nsis"
     }
   }
 }
