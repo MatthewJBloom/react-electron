@@ -36,24 +36,6 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 
-  // Start the CoinbasePro Websocket Feed
-  // let coin_id = "BTC"
-  // const feed = new CoinbaseProFeed()
-  // feed.start()
-  //
-  // // Test add new notification with notification manager
-  // const notificationManager = new NotificationManager()
-  // notificationManager.listen(feed.priceEvents)
-  // feed.priceEvents.once('price', (price) => {
-  //   console.log(`current price is $${price}`)
-  //   notificationManager.newNotification(coin_id, price-50).then(notification => {
-  //     console.log(`notification waiting for ${price-50}`)
-  //   })
-  //   notificationManager.newNotification(coin_id, price+50).then(notification => {
-  //     console.log(`notification waiting for ${price+50}`)
-  //   })
-  // })
-
 
 })
 
