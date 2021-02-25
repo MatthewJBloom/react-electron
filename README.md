@@ -1,3 +1,26 @@
+# React + Electron Testing Skele
+
+This project is a skeleton for testing react and electron for deployment.
+
+Used `npx create-react-app react-electron` to build react app.
+Implemented electron with `npm install electron --save-dev` and `npm install electron-builder --save-dev`.
+
+DONT FORGET TO GIT IGNORE /build AND /dist.
+I forgot and committed some /dist files and they were over the 100MB github cap.
+
+To build, you run `npm run build` to build the react app.
+Then, you run `npm run electron-dist` to build the electron app.
+
+In theory, you can just run `npm run electron-dist` and it should use `"preelectron-pack": "npm run build"` to build the react app first,
+but for some reason that is not working for me yet.
+
+Other findings:
+* build gets upset if you have existing /dist or /build folders
+* build gets upset if you are running the app
+* build gets upset if you have /dist or /build in the atom project directory
+
+Overall this has been a good proof of concept and I will be referring to it when building my coinbase-pro-react-electron app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
