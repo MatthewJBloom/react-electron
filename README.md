@@ -1,25 +1,20 @@
-# React + Electron Testing Skele
+# React + Electron App Skele
 
 This project is a skeleton for testing react and electron for deployment.
 
 Used `npx create-react-app react-electron` to build react app.
 Implemented electron with `npm install electron --save-dev` and `npm install electron-builder --save-dev`.
 
-DONT FORGET TO GIT IGNORE /build AND /dist.
-I forgot and committed some /dist files and they were over the 100MB github cap.
+DON'T FORGET TO GIT IGNORE /build AND /dist.
+Some /dist files end up over the 100MB github cap.
 
 To build, you run `npm run build` to build the react app.
 Then, you run `npm run electron-dist` to build the electron app.
 
 In theory, you can just run `npm run electron-dist` and it should use `"preelectron-pack": "npm run build"` to build the react app first,
-but for some reason that is not working for me yet.
+but for some reason that is not working.
 
-Other findings:
-* build gets upset if you have existing /dist or /build folders
-* build gets upset if you are running the app
-* build gets upset if you have /dist or /build in the atom project directory
-
-Overall this has been a good proof of concept and I will be referring to it when building my coinbase-pro-react-electron app
+Build gets upset if you are running the app.
 
 # Getting Started with Create React App
 
@@ -61,6 +56,18 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `npm run electron-start`
+
+Runs the electron app. Must have the react app running in another console via `npm start`.
+
+### `npm run electron-pack`
+
+Runs electron-builder --dir to test prior to electron-dist.
+
+### `npm run electron-dist`
+
+Runs electron-builder. Must have already built the React App via `npm run build`.
 
 ## Learn More
 
